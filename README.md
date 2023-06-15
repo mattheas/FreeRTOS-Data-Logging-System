@@ -11,7 +11,6 @@ This project serves as an exploration and refamiliarization journey into the cap
 It is assumed that your PC is using a Windows OS and the following are already installed:
 - Python 3
 - Arduino IDE
-- 
 To install the necessary dependencies, kindly follow these steps:
 
 1. Install the pySerial package for Python by executing the following command in the Windows PowerShell:
@@ -23,10 +22,10 @@ python -m pip install pyserial
 
 Wire the water level sensor to your Arduino Mega as seen below. The sensor should connect to the board as follows:
 
-Sensor      Arduino
-  -           GND
-  +           5V (or 3.3V)
-  S           A0
+Sensor       Arduino
+ (-)    <->    GND
+ (+)    <->     5V (or 3.3V)
+ (S)    <->     A0
 
 The Arduino microntroller should then be connected to your PC via a USB cable. Then the Arduino IDE can be used to compile and upload the data_logger.ino script to the Arduino. Once that is done ensure the Serial Monitor in the IDE is CLOSED, or else the python script will not work.
 
