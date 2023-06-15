@@ -3,12 +3,21 @@ import serial
 
 
 def main():
+    # Constants
     SENSOR_DATA_FILE = "SensorData.txt"
-    #get input from user about what port the arduino is connected, make sure that the you ensure the input from the user is an +ive int
-    # code HERE
+
+    while True:
+        try:
+            COM_number = int(input("Enter your COM port number (positive integer): "))
+            if COM_number > 0:
+                break  # Exit the loop if a positive integer is provided
+            else:
+                print("Invalid input. Please enter a positive integer")
+        except ValueError:
+            print("Invalid input. Please enter a positive integer")
     
     # open port 
-    SerialObj = serial.Serial('COM6') # COMxx  format on Windows
+    SerialObj = serial.Serial('COM' + str(COM_number)) # COMxx  format on Windows
                                       # ttyUSBx format on Linux
 
     SerialObj.baudrate = 9600  # set Baud rate to 9600
