@@ -11,9 +11,11 @@ This project serves as an exploration and refamiliarization journey into the cap
 It is assumed that your PC is using a Windows OS and the following are already installed:
 - Python 3
 - Arduino IDE
+
 To install the necessary dependencies, kindly follow these steps:
 
 1. Install the pySerial package for Python by executing the following command in the Windows PowerShell:
+
 python -m pip install pyserial
 
 2. Install the FreeRTOS port for the Arduino microcontroller. Open the Arduino IDE Library Manager and install the most recent version of "FreeRTOS by Richard Barry."
